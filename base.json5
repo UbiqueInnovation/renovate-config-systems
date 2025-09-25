@@ -1,0 +1,50 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":pinAllExceptPeerDependencies",
+        "schedule:monthly",
+        "abandonments:recommended"
+    ],
+    "enabledManagers": [
+        "docker-compose",
+        "dockerfile",
+        "github-actions"
+    ],
+    "hostRules": [
+        {
+            "matchHost": "artifactory.ubique.ch/",
+            "userName": "mend-renovate",
+            "token": "{{ secrets.UBIQUE_GITHUB_COM_TOKEN }}"
+        },
+    ],
+    "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+    ],
+    "separateMajorMinor": true,
+    "separateMinorPatch": true,
+    "packageRules": [
+        // major/minor/patch separate for all packages. Override in specific block below, if undesired
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
+            ],
+            "separateMajorMinor": true,
+            "separateMinorPatch": true,
+        },
+        // least specific rules at the top, as renovate does not stop after the first match and more specific matches at the bottom override previous matches
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "groupName": "Dependencies"
+        },
+    ]
+}
