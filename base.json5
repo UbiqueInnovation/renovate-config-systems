@@ -46,5 +46,17 @@
             ],
             "groupName": "Dependencies"
         },
-    ]
+        {
+            "manager": "docker-compose",
+            "groupName": "Docker Compose Updates"
+        },
+        {
+            "manager": "dockerfile",
+            "groupName": "Dockerfile Updates"
+        },
+        {
+            "manager": "github-actions",
+            "groupName": "GitHub Actions Updates"
+        }
+    ],
 }
