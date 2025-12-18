@@ -55,6 +55,24 @@
                 "/^UbiqueInnovation/action\-systems\-.+$/"
             ],
             "abandonmentThreshold": "3 year"
+        },
+        {
+            "matchManagers": [
+                "docker-compose"
+            ],
+            "groupName": "Docker Compose Updates"
+        },
+        {
+            "matchManagers": [
+                "dockerfile"
+            ],
+            "groupName": "Dockerfile Updates"
+        },
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "groupName": "GitHub Actions Updates"
         }
     ],
 }
