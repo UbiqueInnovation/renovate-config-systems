@@ -15,8 +15,14 @@
         {
             "matchHost": "artifactory.ubique.ch/",
             "userName": "mend-renovate",
-            "token": "{{ secrets.UBIQUE_GITHUB_COM_TOKEN }}"
+            "token": "{{ secrets.UBIQUE_ARTIFACTORY_TOKEN }}"
         },
+        {
+            // GitHub API for repo / release / changelog lookups
+            "matchHost": "https://api.github.com",
+            "hostType": "github",
+            "token": "{{ secrets.UBIQUE_API_GITHUB_COM_TOKEN }}"
+        }
     ],
     "matchUpdateTypes": [
         "major",
@@ -28,9 +34,6 @@
     "packageRules": [
         // major/minor/patch separate for all packages. Override in specific block below, if undesired
         {
-            "matchPackagePatterns": [
-                "*"
-            ],
             "matchUpdateTypes": [
                 "major",
                 "minor",
@@ -41,10 +44,17 @@
         },
         // least specific rules at the top, as renovate does not stop after the first match and more specific matches at the bottom override previous matches
         {
-            "matchPackagePatterns": [
-                "*"
-            ],
             "groupName": "Dependencies"
+        },
+        // Some of our own action have no need to be updated often, so we allow larger abandonmentThreshold
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchPackageNames": [
+                "/^UbiqueInnovation/action\-systems\-.+$/"
+            ],
+            "abandonmentThreshold": "3 year"
         }
     ],
 }
