@@ -7,9 +7,14 @@
         "abandonments:recommended"
     ],
     "enabledManagers": [
+        "ansible",
         "docker-compose",
         "dockerfile",
-        "github-actions"
+        "kubernetes",
+        "github-actions",
+        "npm",
+        "pip_requirements",
+        "poetry"
     ],
     "hostRules": [
         {
