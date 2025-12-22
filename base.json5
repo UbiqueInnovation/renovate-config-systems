@@ -27,9 +27,7 @@
                 "major",
                 "minor",
                 "patch"
-            ],
-            "separateMajorMinor": true,
-            "separateMinorPatch": true,
+            ]
         },
         // least specific rules at the top, as renovate does not stop after the first match and more specific matches at the bottom override previous matches
         {
