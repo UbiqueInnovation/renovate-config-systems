@@ -16,12 +16,6 @@
             "matchHost": "artifactory.ubique.ch/",
             "userName": "mend-renovate",
             "token": "{{ secrets.UBIQUE_ARTIFACTORY_TOKEN }}"
-        },
-        {
-            // GitHub API for repo / release / changelog lookups
-            "matchHost": "https://api.github.com",
-            "hostType": "github",
-            "token": "{{ secrets.UBIQUE_API_GITHUB_COM_TOKEN }}"
         }
     ],
     "matchUpdateTypes": [
