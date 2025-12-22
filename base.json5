@@ -27,10 +27,7 @@
                 "major",
                 "minor",
                 "patch"
-            ]
-        },
-        // least specific rules at the top, as renovate does not stop after the first match and more specific matches at the bottom override previous matches
-        {
+            ],
             "groupName": "Dependencies"
         },
         // Some of our own actions have no need to be updated often, so we allow larger abandonmentThreshold
