@@ -14,7 +14,7 @@
     "hostRules": [
         {
             "matchHost": "artifactory.ubique.ch/",
-            "userName": "mend-renovate",
+            "username": "mend-renovate",
             "token": "{{ secrets.UBIQUE_ARTIFACTORY_TOKEN }}"
         }
     ],
