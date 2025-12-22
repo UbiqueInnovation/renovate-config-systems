@@ -40,16 +40,16 @@
         {
             "groupName": "Dependencies"
         },
-        // Some of our own action have no need to be updated often, so we allow larger abandonmentThreshold
-//        {
-//            "matchManagers": [
-//                "github-actions"
-//            ],
-//            "matchPackageNames": [
-//                "/^UbiqueInnovation/action\-systems\-.+$/"
-//            ],
-//            "abandonmentThreshold": "3 year"
-//        },
+        // Some of our own actions have no need to be updated often, so we allow larger abandonmentThreshold
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchPackageNames": [
+                "/^UbiqueInnovation/action\-systems\-.+$/"
+            ],
+            "abandonmentThreshold": "3 year"
+        },
         {
             "matchManagers": [
                 "docker-compose"
