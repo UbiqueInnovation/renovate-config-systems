@@ -4,7 +4,8 @@
         "config:recommended",
         ":pinAllExceptPeerDependencies",
         "schedule:monthly",
-        "abandonments:recommended"
+        "abandonments:recommended",
+        "docker:enableMajor"
     ],
     "enabledManagers": [
         "ansible",
