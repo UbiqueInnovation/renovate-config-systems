@@ -20,7 +20,7 @@
     ],
     "hostRules": [
         {
-            "matchHost": "artifactory.ubique.ch/",
+            "matchHost": "https://artifactory.ubique.ch/",
             "username": "mend-renovate",
             "token": "{{ secrets.UBIQUE_ARTIFACTORY_TOKEN }}"
         }
@@ -43,7 +43,7 @@
                 "github-actions"
             ],
             "matchPackageNames": [
-                "/^UbiqueInnovation/action\-systems\-.+$/"
+                "/^UbiqueInnovation/action-systems-.+$/"
             ],
             "abandonmentThreshold": "3 year"
         },
@@ -65,5 +65,5 @@
             ],
             "groupName": "GitHub Actions Updates"
         }
-    ],
+    ]
 }
