@@ -5,7 +5,8 @@
         ":pinAllExceptPeerDependencies",
         "schedule:monthly",
         "abandonments:recommended",
-        "docker:enableMajor"
+        "docker:enableMajor",
+        "helpers:pinGitHubActionDigests"
     ],
     "enabledManagers": [
         "ansible",
