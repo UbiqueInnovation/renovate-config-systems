@@ -8,6 +8,7 @@
         "docker:enableMajor",
         "helpers:pinGitHubActionDigests"
     ],
+    "configMigration": true,
     "enabledManagers": [
         "ansible",
         "docker-compose",
