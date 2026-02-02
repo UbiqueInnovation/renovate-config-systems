@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "renovate": "42.81.16"
+        "renovate": "42.95.2"
     },
     "scripts": {
         "renovate:validate": "renovate-config-validator base.json5"
