@@ -48,6 +48,16 @@
             ],
             "abandonmentThreshold": "3 year"
         },
+        // Some of our other packages we checked and are ok to be older
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchPackageNames": [
+                "m-s-abeer/update-gha-summary-with-workflow-inputs"
+            ],
+            "abandonmentThreshold": "3 year"
+        },
         {
             "matchManagers": [
                 "docker-compose"
