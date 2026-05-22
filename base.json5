@@ -17,7 +17,9 @@
         "github-actions",
         "npm",
         "pip_requirements",
-        "poetry"
+        "poetry",
+        "ansible-galaxy",
+        "custom.regex"
     ],
     "hostRules": [
         {
