@@ -9,6 +9,7 @@
         "helpers:pinGitHubActionDigests"
     ],
     "configMigration": true,
+    "minimumReleaseAge": "7 days",
     "enabledManagers": [
         "ansible",
         "docker-compose",
