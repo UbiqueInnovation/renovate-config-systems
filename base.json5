@@ -29,6 +29,24 @@
             "token": "{{ secrets.UBIQUE_ARTIFACTORY_TOKEN }}"
         }
     ],
+
+    // START override for config:recommended
+    // config:recommended includes ignoreModulesAndTests, including java test directories, which we do not want to ignore
+    // see config:recommended https://docs.renovatebot.com/presets-config/#configrecommended
+    // see ignoreModulesAndTests https://docs.renovatebot.com/presets-default/#ignoremodulesandtests
+    // Keep java test directories visible so custom managers can detect dependencies there.
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**",
+        "**/examples/**",
+        "**/__tests__/**",
+        // "**/test/**", not ignored to keep src/test/java visible
+        "**/tests/**",
+        "**/__fixtures__/**",
+    ],
+    // END override for config:recommended
+
     "separateMajorMinor": true,
     "separateMinorPatch": true,
     "packageRules": [
