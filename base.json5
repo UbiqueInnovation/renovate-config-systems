@@ -95,7 +95,26 @@
             "matchManagers": [
                 "github-actions"
             ],
-            "groupName": "GitHub Actions Updates"
+            "groupName": "GitHub Actions Updates",
+            "minimumReleaseAge": "1 day"
+        },
+        // UbiqueInnovation actions can have a shorter release age
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchPackageNames": [
+                "UbiqueInnovation/**"
+            ],
+            "minimumReleaseAge": "4 hours"
+        },
+        // Auto-merge patch updates for GitHub Actions
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchUpdateTypes": ["patch"],
+            "automerge": true
         }
     ]
 }
