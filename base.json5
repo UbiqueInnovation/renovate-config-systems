@@ -32,10 +32,6 @@
             "matchHost": "ubique.azurecr.io",
             "username": "{{ secrets.UBIQUE_ACR_USERNAME }}",
             "password": "{{ secrets.UBIQUE_ACR_PASSWORD }}"
-        },
-        {
-            "matchHost": "github.com",
-            "token": "{{ secrets.UBIQUE_GITHUB_COM_TOKEN }}",
         }
     ],
     // START override for config:recommended
