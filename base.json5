@@ -30,7 +30,7 @@
         },
         {
             "matchHost": "ubique.azurecr.io",
-            "username": "{{ secrets.UBIQUE_ACR_USERNAME }}",
+            "username": "ubique",
             "password": "{{ secrets.UBIQUE_ACR_PASSWORD }}"
         }
     ],
