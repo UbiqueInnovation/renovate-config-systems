@@ -79,7 +79,8 @@
                 "github-actions"
             ],
             "matchPackageNames": [
-                "m-s-abeer/update-gha-summary-with-workflow-inputs"
+                "m-s-abeer/update-gha-summary-with-workflow-inputs",
+                "s4u/maven-settings-action"
             ],
             "abandonmentThreshold": "3 year"
         },
