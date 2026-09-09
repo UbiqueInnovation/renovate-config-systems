@@ -103,6 +103,22 @@
             "groupName": "GitHub Actions Updates",
             "minimumReleaseAge": "1 day"
         },
+        // Replace the unmaintained Azure Docker login action
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "matchPackageNames": [
+                "azure/docker-login"
+            ],
+            "replacementName": "docker/login-action",
+            "replacementVersion": "4.0.0",
+            "groupName": null,
+            "automerge": false,
+            "prBodyNotes": [
+                "Migration required: rename the `login-server` input to `registry` in the affected steps before merging. See https://github.com/docker/login-action#usage."
+            ]
+        },
         // UbiqueInnovation actions can have a shorter release age
         {
             "matchManagers": [
