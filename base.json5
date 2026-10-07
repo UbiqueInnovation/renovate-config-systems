@@ -16,6 +16,8 @@
         "dockerfile",
         "kubernetes",
         "github-actions",
+        "cargo",
+        "rust-toolchain",
         "npm",
         "pip_requirements",
         "poetry",
